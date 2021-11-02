@@ -31,17 +31,14 @@ rl.question(
                   "Which sport is your absolute favourite? ",
                   (answer) => {
                     answers.push(answer);
-                    rl.question(
-                      "Which sport is your absolute favourite? ",
-                      (answer) => {
-                        answers.push(answer);
-                        console.log(
-                          `Thank you for your valuable feedback: ${answers}`
-                        );
+                    rl.question("What is your superpower? ", (answer) => {
+                      answers.push(answer);
+                      console.log(
+                        `${answers[0]} loves ${answers[1]} while listening to ${answers[2]},\nprefers ${answers[5]} over any other sport, devouring ${answers[4]} for ${answers[3]},\nand is amazing at ${answers[6]}`
+                      );
 
-                        rl.close();
-                      }
-                    );
+                      rl.close();
+                    });
                   }
                 );
               }
